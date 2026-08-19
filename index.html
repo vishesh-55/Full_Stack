@@ -1,69 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>YourStore - Home</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
-        <h1>YourStore</h1>
 
+        <div class="logo">
+            YourStore
+        </div>
+
+        <!-- NAVIGATION -->
         <nav>
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
             <a href="cart.html">Cart</a>
         </nav>
+
     </header>
+
 
     <main>
 
-        <!-- Hero Section -->
-        <section>
-            <h2>Welcome to YourStore</h2>
-            <p>Find quality products at affordable prices.</p>
-            <a href="products.html">Shop Now</a>
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <h1>Welcome to YourStore</h1>
+
+            <p>
+                Discover quality products at affordable prices.
+            </p>
+
+            <a href="products.html" class="shop-button">
+                Shop Now
+            </a>
+
         </section>
 
-        <!-- Featured Products -->
-        <section>
+
+        <!-- FEATURED PRODUCTS -->
+        <section class="featured-section">
+
             <h2>Featured Products</h2>
 
-            <div>
-                <img src="https://via.placeholder.com/200" alt="Wireless Headphones">
-                <h3>Wireless Headphones</h3>
-                <p>Price: ₹1,999</p>
-            </div>
+            <div class="product-grid">
 
-            <div>
-                <img src="https://via.placeholder.com/200" alt="Smart Watch">
-                <h3>Smart Watch</h3>
-                <p>Price: ₹2,499</p>
-            </div>
+                <!-- PRODUCT 1 -->
+                <div class="product-card">
 
-            <div>
-                <img src="https://via.placeholder.com/200" alt="Running Shoes">
-                <h3>Running Shoes</h3>
-                <p>Price: ₹1,799</p>
-            </div>
+                    <img
+                        src="https://placehold.co/400x300?text=Headphones"
+                        alt="Wireless Headphones"
+                    >
 
-            <div>
-                <img src="https://via.placeholder.com/200" alt="Travel Backpack">
-                <h3>Travel Backpack</h3>
-                <p>Price: ₹1,299</p>
+                    <h3>Wireless Headphones</h3>
+
+                    <p class="price">
+                        ₹1,999
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 2 -->
+                <div class="product-card">
+
+                    <img
+                        src="https://placehold.co/400x300?text=Smart+Watch"
+                        alt="Smart Watch"
+                    >
+
+                    <h3>Smart Watch</h3>
+
+                    <p class="price">
+                        ₹2,499
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 3 -->
+                <div class="product-card">
+
+                    <img
+                        src="https://placehold.co/400x300?text=Running+Shoes"
+                        alt="Running Shoes"
+                    >
+
+                    <h3>Running Shoes</h3>
+
+                    <p class="price">
+                        ₹1,799
+                    </p>
+
+                </div>
+
+
+                <!-- PRODUCT 4 -->
+                <div class="product-card">
+
+                    <img
+                        src="https://placehold.co/400x300?text=Backpack"
+                        alt="Travel Backpack"
+                    >
+
+                    <h3>Travel Backpack</h3>
+
+                    <p class="price">
+                        ₹1,299
+                    </p>
+
+                </div>
+
             </div>
 
         </section>
 
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
-        <p>Contact: support@yourstore.com</p>
-        <p>Phone: +91 9876543210</p>
-        <p>&copy; 2026 YourStore. All Rights Reserved.</p>
+
+        <p>
+            Contact: support@yourstore.com
+        </p>
+
+        <p>
+            Phone: +91 9876543210
+        </p>
+
+        <p>
+            &copy; 2026 YourStore. All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
+
 </html>

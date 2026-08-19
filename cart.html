@@ -1,81 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>YourStore - Cart</title>
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
-        <h1>YourStore</h1>
+
+        <div class="logo">
+            YourStore
+        </div>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="cart.html">Cart</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="cart.html">
+                Cart
+            </a>
+
         </nav>
+
     </header>
+
 
     <main>
 
-        <h2>Shopping Cart</h2>
+        <h1 class="page-title">
+            Shopping Cart
+        </h1>
 
-        <table border="1">
 
-            <thead>
-                <tr>
-                    <th>Item Name</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
+        <!-- CART TABLE -->
+        <div class="cart-container">
 
-            <tbody>
+            <table>
 
-                <tr>
-                    <td>Wireless Headphones</td>
-                    <td>1</td>
-                    <td>₹1,999</td>
-                    <td>₹1,999</td>
-                </tr>
+                <thead>
 
-                <tr>
-                    <td>Smart Watch</td>
-                    <td>1</td>
-                    <td>₹2,499</td>
-                    <td>₹2,499</td>
-                </tr>
+                    <tr>
 
-                <tr>
-                    <td>Running Shoes</td>
-                    <td>2</td>
-                    <td>₹1,799</td>
-                    <td>₹3,598</td>
-                </tr>
+                        <th>
+                            Item Name
+                        </th>
 
-                <tr>
-                    <th colspan="3">Grand Total</th>
-                    <th>₹8,096</th>
-                </tr>
+                        <th>
+                            Quantity
+                        </th>
 
-            </tbody>
+                        <th>
+                            Price
+                        </th>
 
-        </table>
+                        <th>
+                            Subtotal
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Wireless Headphones
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            ₹1,999
+                        </td>
+
+                        <td>
+                            ₹1,999
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Smart Watch
+                        </td>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            ₹2,499
+                        </td>
+
+                        <td>
+                            ₹2,499
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Running Shoes
+                        </td>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            ₹1,799
+                        </td>
+
+                        <td>
+                            ₹3,598
+                        </td>
+
+                    </tr>
+
+
+                    <!-- GRAND TOTAL -->
+
+                    <tr class="grand-total">
+
+                        <th colspan="3">
+                            Grand Total
+                        </th>
+
+                        <th>
+                            ₹8,096
+                        </th>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
 
         <br>
 
-        <a href="checkout.html">Proceed to Checkout</a>
+
+        <a
+            href="checkout.html"
+            class="checkout-button"
+        >
+            Proceed to Checkout
+        </a>
 
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
-        <p>Contact: support@yourstore.com</p>
-        <p>Phone: +91 9876543210</p>
-        <p>&copy; 2026 YourStore. All Rights Reserved.</p>
+
+        <p>
+            Contact: support@yourstore.com
+        </p>
+
+        <p>
+            Phone: +91 9876543210
+        </p>
+
+        <p>
+            &copy; 2026 YourStore. All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
+
 </html>
