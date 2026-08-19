@@ -1,27 +1,27 @@
 /* ========================================
-   COLOR VARIABLES
+   PROFESSIONAL COLOR VARIABLES
 ======================================== */
 
 :root {
-    --primary: #4f7cff;
-    --primary-light: #eef4ff;
+    --primary: #8b6f47;
+    --primary-light: #f3eee7;
 
-    --secondary: #26354a;
-    --secondary-light: #475569;
+    --secondary: #292524;
+    --secondary-light: #57534e;
 
-    --accent: #f6b84b;
-    --accent-light: #fff7e6;
+    --accent: #c49a5a;
+    --accent-light: #faf4e8;
 
-    --bg: #f5f8fc;
+    --bg: #f7f5f2;
     --white: #ffffff;
 
-    --text: #334155;
-    --text-light: #64748b;
+    --text: #3f3a35;
+    --text-light: #78716c;
 
-    --border: #e2e8f0;
+    --border: #e7e1d8;
 
-    --shadow: 0 4px 15px rgba(71, 85, 105, 0.08);
-    --shadow-hover: 0 10px 25px rgba(71, 85, 105, 0.14);
+    --shadow: 0 4px 15px rgba(41, 37, 36, 0.08);
+    --shadow-hover: 0 12px 28px rgba(41, 37, 36, 0.13);
 }
 
 
@@ -68,55 +68,55 @@ h3 {
 ======================================== */
 
 header {
-    background: var(--white);
-    color: var(--secondary);
+    background: var(--secondary);
+    color: var(--white);
+
     padding: 18px 7%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 2px 10px rgba(71, 85, 105, 0.06);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
 .logo {
     font-size: 28px;
     font-weight: bold;
-    color: var(--primary);
+    color: #f5ead8;
 }
 
 nav {
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 nav a {
-    color: var(--secondary);
+    color: #f5f5f4;
     text-decoration: none;
     font-weight: bold;
 
     padding: 8px 14px;
-    border-radius: 7px;
+    border-radius: 6px;
 
     transition: 0.3s;
 }
 
 nav a:hover {
-    background: var(--primary-light);
-    color: var(--primary);
+    background: #56504b;
+    color: #e7c98b;
 }
 
 
 /* ========================================
-   HERO
+   HERO SECTION
 ======================================== */
 
 .hero {
     background: linear-gradient(
         135deg,
-        #5b83ff,
-        #7599ff
+        #6b6258,
+        #4a4540
     );
 
     color: var(--white);
@@ -125,25 +125,31 @@ nav a:hover {
     padding: 80px 30px;
 
     border-radius: 18px;
+
     margin-bottom: 50px;
 
-    box-shadow: 0 10px 30px rgba(79, 124, 255, 0.18);
+    box-shadow: 0 10px 28px rgba(41, 37, 36, 0.15);
 }
 
 .hero h1 {
     color: var(--white);
+
     font-size: 42px;
+
     margin: 0 0 10px;
 }
 
 .hero p {
+    color: #eeeae4;
+
     font-size: 20px;
+
     margin-bottom: 30px;
 }
 
 
 /* ========================================
-   BUTTONS
+   SHOP / CHECKOUT BUTTONS
 ======================================== */
 
 .shop-button,
@@ -151,11 +157,13 @@ nav a:hover {
     display: inline-block;
 
     background: var(--accent);
-    color: #3b2f12;
+
+    color: #30271c;
 
     padding: 12px 25px;
 
     text-decoration: none;
+
     border-radius: 7px;
 
     font-weight: bold;
@@ -165,9 +173,11 @@ nav a:hover {
 
 .shop-button:hover,
 .checkout-button:hover {
+    background: #cfcad0;
+
     transform: translateY(-2px);
-    background: #f3ad32;
-    box-shadow: 0 5px 15px rgba(246, 184, 75, 0.25);
+
+    box-shadow: 0 5px 15px rgba(196, 154, 90, 0.25);
 }
 
 
@@ -190,6 +200,7 @@ nav a:hover {
     padding: 20px;
 
     border: 1px solid var(--border);
+
     border-radius: 14px;
 
     box-shadow: var(--shadow);
@@ -199,12 +210,15 @@ nav a:hover {
 
 .product-card:hover {
     transform: translateY(-6px);
+
     box-shadow: var(--shadow-hover);
-    border-color: #cbd8f8;
+
+    border-color: #d8cbb9;
 }
 
 .product-card img {
     width: 100%;
+
     height: 220px;
 
     object-fit: cover;
@@ -220,6 +234,7 @@ nav a:hover {
     color: var(--primary);
 
     font-size: 20px;
+
     font-weight: bold;
 }
 
@@ -229,10 +244,11 @@ nav a:hover {
 ======================================== */
 
 button {
-    background: var(--primary);
+    background: var(--secondary);
+
     color: var(--white);
 
-    border: 0;
+    border: none;
 
     padding: 11px 18px;
 
@@ -246,7 +262,8 @@ button {
 }
 
 button:hover {
-    background: #3d68dc;
+    background: var(--primary);
+
     transform: translateY(-2px);
 }
 
@@ -275,6 +292,7 @@ button:hover {
 
 .detail-image {
     width: 100%;
+
     max-width: 500px;
 
     height: 400px;
@@ -290,6 +308,7 @@ button:hover {
 
 .product-info p {
     font-size: 17px;
+
     color: var(--text-light);
 }
 
@@ -301,12 +320,13 @@ button:hover {
     margin-left: 10px;
 
     border: 1px solid var(--border);
+
     border-radius: 6px;
 }
 
 
 /* ========================================
-   CHECKOUT
+   CHECKOUT FORM
 ======================================== */
 
 .checkout-form {
@@ -349,7 +369,9 @@ button:hover {
 
     outline: none;
 
-    background: #fbfdff;
+    background: #fdfcfb;
+
+    color: var(--text);
 
     transition: 0.3s;
 }
@@ -361,7 +383,7 @@ button:hover {
     background: var(--white);
 
     box-shadow:
-        0 0 0 3px rgba(79, 124, 255, 0.12);
+        0 0 0 3px rgba(139, 111, 71, 0.12);
 }
 
 .payment-option {
@@ -395,7 +417,7 @@ button:hover {
 .place-order-button:hover {
     background: var(--accent);
 
-    color: #3b2f12;
+    color: #30271c;
 }
 
 
@@ -439,7 +461,7 @@ td {
 }
 
 tbody tr:hover {
-    background: #f8faff;
+    background: #faf8f5;
 }
 
 .grand-total th {
@@ -466,7 +488,7 @@ tbody tr:hover {
 footer {
     background: var(--secondary);
 
-    color: var(--white);
+    color: #e7e5e4;
 
     text-align: center;
 
@@ -480,7 +502,7 @@ footer p {
 }
 
 footer a {
-    color: #cbd5e1;
+    color: #d6c5a9;
 
     text-decoration: none;
 }
