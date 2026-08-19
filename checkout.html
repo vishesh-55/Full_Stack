@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourStore - Checkout</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>YourStore</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Checkout</h2>
+
+        <form>
+
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+            >
+
+            <br><br>
+
+            <!-- Address -->
+            <label for="address">Address:</label>
+            <textarea
+                id="address"
+                name="address"
+                rows="4"
+                cols="40"
+                required
+            ></textarea>
+
+            <br><br>
+
+            <!-- City -->
+            <label for="city">City:</label>
+            <input
+                type="text"
+                id="city"
+                name="city"
+                required
+            >
+
+            <br><br>
+
+            <!-- Pincode -->
+            <label for="pincode">Pincode:</label>
+            <input
+                type="text"
+                id="pincode"
+                name="pincode"
+                maxlength="6"
+                required
+            >
+
+            <br><br>
+
+            <!-- Phone -->
+            <label for="phone">Phone:</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+            >
+
+            <br><br>
+
+            <!-- Payment Method -->
+            <h3>Payment Method</h3>
+
+            <input
+                type="radio"
+                id="cod"
+                name="payment"
+                value="cod"
+                required
+            >
+            <label for="cod">Cash on Delivery</label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="upi"
+                name="payment"
+                value="upi"
+            >
+            <label for="upi">UPI</label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="card"
+                name="payment"
+                value="card"
+            >
+            <label for="card">Credit/Debit Card</label>
+
+            <br><br>
+
+            <button type="submit">Place Order</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Contact: support@yourstore.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>&copy; 2026 YourStore. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
