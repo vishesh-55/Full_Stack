@@ -2,108 +2,66 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>YourStore - Checkout</title>
-
-    <!-- CSS FILE -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <header>
-
-        <div class="logo">
-            YourStore
-        </div>
+        <div class="logo">YourStore</div>
 
         <nav>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="products.html">
-                Products
-            </a>
-
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
             <a href="cart.html">
-                Cart
+                Cart (<span class="cart-count">0</span>)
             </a>
-
         </nav>
-
     </header>
-
 
     <main>
 
-        <h1 class="page-title">
-            Checkout
-        </h1>
-
-
-        <!-- CHECKOUT FORM -->
+        <h1 class="page-title">Checkout</h1>
 
         <form class="checkout-form">
 
-
-            <!-- NAME -->
-
-            <label for="name">
-                Name
-            </label>
+            <label for="name">Name</label>
 
             <input
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Enter your name"
-                required
             >
 
+            <span id="name-error" class="error"></span>
 
-            <!-- ADDRESS -->
-
-            <label for="address">
-                Address
-            </label>
+            <label for="address">Address</label>
 
             <textarea
                 id="address"
                 name="address"
                 rows="4"
                 placeholder="Enter your complete address"
-                required
             ></textarea>
 
+            <span id="address-error" class="error"></span>
 
-            <!-- CITY -->
-
-            <label for="city">
-                City
-            </label>
+            <label for="city">City</label>
 
             <input
                 type="text"
                 id="city"
                 name="city"
                 placeholder="Enter your city"
-                required
             >
 
+            <span id="city-error" class="error"></span>
 
-            <!-- PINCODE -->
-
-            <label for="pincode">
-                Pincode
-            </label>
+            <label for="pincode">Pincode</label>
 
             <input
                 type="text"
@@ -111,31 +69,23 @@
                 name="pincode"
                 placeholder="Enter 6 digit pincode"
                 maxlength="6"
-                required
             >
 
+            <span id="pincode-error" class="error"></span>
 
-            <!-- PHONE -->
-
-            <label for="phone">
-                Phone
-            </label>
+            <label for="phone">Phone</label>
 
             <input
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="Enter your phone number"
-                required
+                placeholder="Enter 10 digit phone number"
+                maxlength="10"
             >
 
+            <span id="phone-error" class="error"></span>
 
-            <!-- PAYMENT METHOD -->
-
-            <h3>
-                Payment Method
-            </h3>
-
+            <h3>Payment Method</h3>
 
             <div class="payment-option">
 
@@ -144,7 +94,6 @@
                     id="cod"
                     name="payment"
                     value="Cash on Delivery"
-                    required
                 >
 
                 <label for="cod">
@@ -152,7 +101,6 @@
                 </label>
 
             </div>
-
 
             <div class="payment-option">
 
@@ -169,7 +117,6 @@
 
             </div>
 
-
             <div class="payment-option">
 
                 <input
@@ -185,11 +132,9 @@
 
             </div>
 
+            <span id="payment-error" class="error"></span>
 
             <br>
-
-
-            <!-- SUBMIT BUTTON -->
 
             <button
                 type="submit"
@@ -200,26 +145,17 @@
 
         </form>
 
+        <div id="order-message"></div>
+
     </main>
 
-
-    <!-- FOOTER -->
-
     <footer>
-
-        <p>
-            Contact: support@yourstore.com
-        </p>
-
-        <p>
-            Phone: +91 9876543210
-        </p>
-
-        <p>
-            &copy; 2026 YourStore. All Rights Reserved.
-        </p>
-
+        <p>Contact: support@yourstore.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>&copy; 2026 YourStore. All Rights Reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 

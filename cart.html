@@ -2,147 +2,58 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>YourStore - Cart</title>
-
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
     <header>
-
-        <div class="logo">
-            YourStore
-        </div>
+        <div class="logo">YourStore</div>
 
         <nav>
-
             <a href="index.html">Home</a>
-
             <a href="products.html">Products</a>
-
-            <a href="cart.html">Cart</a>
-
+            <a href="cart.html">
+                Cart (<span class="cart-count">0</span>)
+            </a>
         </nav>
-
     </header>
-
 
     <main>
 
-        <h1 class="page-title">
-            Shopping Cart
-        </h1>
-
+        <h1 class="page-title">Shopping Cart</h1>
 
         <div class="cart-container">
 
             <table>
 
                 <thead>
-
                     <tr>
-
                         <th>Image</th>
                         <th>Item Name</th>
                         <th>Quantity</th>
                         <th>Price</th>
                         <th>Subtotal</th>
-
                     </tr>
-
                 </thead>
 
+                <tbody id="cart-body"></tbody>
 
-                <tbody>
-
-                    <tr>
-
-                        <td>
-                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80"
-                                alt="Wireless Headphones" class="cart-image">
-                        </td>
-
-                        <td>
-                            Wireless Headphones
-                        </td>
-
-                        <td>1</td>
-
-                        <td>₹1,999</td>
-
-                        <td>₹1,999</td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80"
-                                alt="Smart Watch" class="cart-image">
-                        </td>
-
-                        <td>
-                            Smart Watch
-                        </td>
-
-                        <td>1</td>
-
-                        <td>₹2,499</td>
-
-                        <td>₹2,499</td>
-
-                    </tr>
-
-
-                    <tr>
-
-                        <td>
-                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80"
-                                alt="Running Shoes" class="cart-image">
-                        </td>
-
-                        <td>
-                            Running Shoes
-                        </td>
-
-                        <td>2</td>
-
-                        <td>₹1,799</td>
-
-                        <td>₹3,598</td>
-
-                    </tr>
-
-
+                <tfoot>
                     <tr class="grand-total">
-
-                        <th colspan="4">
-                            Grand Total
-                        </th>
-
-                        <th>
-                            ₹8,096
-                        </th>
-
+                        <th colspan="4">Grand Total</th>
+                        <th id="grand-total">₹0</th>
                     </tr>
-
-                </tbody>
+                </tfoot>
 
             </table>
 
         </div>
 
-
         <br>
-
 
         <a href="checkout.html" class="checkout-button">
             Proceed to Checkout
@@ -150,16 +61,13 @@
 
     </main>
 
-
     <footer>
-
         <p>Contact: support@yourstore.com</p>
-
         <p>Phone: +91 9876543210</p>
-
         <p>&copy; 2026 YourStore. All Rights Reserved.</p>
-
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 

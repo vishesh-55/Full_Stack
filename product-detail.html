@@ -2,86 +2,78 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>YourStore - Product Details</title>
-
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
     <header>
 
-        <div class="logo">
-            YourStore
-        </div>
+        <div class="logo">YourStore</div>
 
         <nav>
-
             <a href="index.html">Home</a>
-
             <a href="products.html">Products</a>
-
-            <a href="cart.html">Cart</a>
-
+            <a href="cart.html">
+                Cart (<span class="cart-count">0</span>)
+            </a>
         </nav>
 
     </header>
 
-
     <main>
 
-        <h1 class="page-title">
-            Product Details
-        </h1>
-
+        <h1 class="page-title">Product Details</h1>
 
         <section class="product-detail">
 
             <div>
 
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
-                    alt="Wireless Headphones" class="detail-image">
+                <img
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+                    alt="Wireless Headphones"
+                    class="detail-image"
+                >
 
             </div>
 
-
             <div class="product-info">
 
-                <h1>
-                    Wireless Headphones
-                </h1>
+                <h1>Wireless Headphones</h1>
 
                 <p>
-                    Experience high-quality sound with our
-                    wireless headphones. These headphones provide
-                    clear audio, comfortable ear cushions and
-                    long battery life.
+                    Experience high-quality sound with our wireless
+                    headphones. These headphones provide clear audio,
+                    comfortable ear cushions and long battery life.
                 </p>
 
                 <p>
                     Perfect for music, gaming, movies and everyday use.
                 </p>
 
-                <h2 class="price">
-                    ₹1,999
-                </h2>
-
+                <h2 class="price">₹1,999</h2>
 
                 <label for="quantity">
                     Quantity:
                 </label>
 
-                <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-input">
+                <input
+                    type="number"
+                    id="quantity"
+                    value="1"
+                    min="1"
+                    class="quantity-input"
+                >
 
                 <br><br>
 
-                <button>
+                <button
+                    id="detail-add-cart"
+                    data-id="1"
+                >
                     Add to Cart
                 </button>
 
@@ -91,16 +83,24 @@
 
     </main>
 
-
     <footer>
-
         <p>Contact: support@yourstore.com</p>
-
         <p>Phone: +91 9876543210</p>
-
         <p>&copy; 2026 YourStore. All Rights Reserved.</p>
-
     </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.getElementById("detail-add-cart").addEventListener("click", function() {
+            const quantity = Number(document.getElementById("quantity").value);
+            const productId = Number(this.dataset.id);
+
+            for (let i = 0; i < quantity; i++) {
+                addToCart(productId);
+            }
+        });
+    </script>
 
 </body>
 
