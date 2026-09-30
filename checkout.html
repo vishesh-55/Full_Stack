@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourStore - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">YourStore</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">
+                Cart (<span class="cart-count">0</span>)
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1 class="page-title">Checkout</h1>
+
+        <form class="checkout-form">
+
+            <label for="name">Name</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+            >
+
+            <span id="name-error" class="error"></span>
+
+            <label for="address">Address</label>
+
+            <textarea
+                id="address"
+                name="address"
+                rows="4"
+                placeholder="Enter your complete address"
+            ></textarea>
+
+            <span id="address-error" class="error"></span>
+
+            <label for="city">City</label>
+
+            <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Enter your city"
+            >
+
+            <span id="city-error" class="error"></span>
+
+            <label for="pincode">Pincode</label>
+
+            <input
+                type="text"
+                id="pincode"
+                name="pincode"
+                placeholder="Enter 6 digit pincode"
+                maxlength="6"
+            >
+
+            <span id="pincode-error" class="error"></span>
+
+            <label for="phone">Phone</label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter 10 digit phone number"
+                maxlength="10"
+            >
+
+            <span id="phone-error" class="error"></span>
+
+            <h3>Payment Method</h3>
+
+            <div class="payment-option">
+
+                <input
+                    type="radio"
+                    id="cod"
+                    name="payment"
+                    value="Cash on Delivery"
+                >
+
+                <label for="cod">
+                    Cash on Delivery
+                </label>
+
+            </div>
+
+            <div class="payment-option">
+
+                <input
+                    type="radio"
+                    id="upi"
+                    name="payment"
+                    value="UPI"
+                >
+
+                <label for="upi">
+                    UPI
+                </label>
+
+            </div>
+
+            <div class="payment-option">
+
+                <input
+                    type="radio"
+                    id="card"
+                    name="payment"
+                    value="Credit/Debit Card"
+                >
+
+                <label for="card">
+                    Credit/Debit Card
+                </label>
+
+            </div>
+
+            <span id="payment-error" class="error"></span>
+
+            <br>
+
+            <button
+                type="submit"
+                class="place-order-button"
+            >
+                Place Order
+            </button>
+
+        </form>
+
+        <div id="order-message"></div>
+
+    </main>
+
+    <footer>
+        <p>Contact: support@yourstore.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>&copy; 2026 YourStore. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

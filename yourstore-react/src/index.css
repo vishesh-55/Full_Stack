@@ -1,0 +1,382 @@
+/* =========================================================
+   GLOBAL RESET & VARIABLES
+   ========================================================= */
+
+:root {
+  --primary: #635bff;
+  --primary-dark: #4f46e5;
+  --secondary: #14b8a6;
+
+  --text: #111827;
+  --text-light: #6b7280;
+
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+
+  --border: #e5e7eb;
+
+  --danger: #ef4444;
+  --danger-dark: #dc2626;
+
+  --success: #16a34a;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.1);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  color: var(--text);
+  background: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+
+  background: var(--surface);
+  color: var(--text);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 3px rgba(99, 91, 255, 0.12);
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+  border: none;
+  border-radius: var(--radius-sm);
+
+  padding: 11px 18px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================================
+   PRODUCT BUTTON
+   ========================================================= */
+
+.product-card button {
+  background: var(--primary);
+  color: white;
+
+  padding: 11px 20px;
+
+  box-shadow: 0 4px 12px rgba(99, 91, 255, 0.2);
+}
+
+.product-card button:hover {
+  background: var(--primary-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(99, 91, 255, 0.3);
+}
+
+
+/* =========================================================
+   CART BUTTONS
+   ========================================================= */
+
+.total button,
+.checkout button,
+.order-success button {
+  background: var(--primary);
+  color: white;
+
+  padding: 12px 24px;
+
+  box-shadow:
+    0 5px 15px rgba(99, 91, 255, 0.2);
+}
+
+.total button:hover,
+.checkout button:hover,
+.order-success button:hover {
+  background: var(--primary-dark);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   REMOVE BUTTON
+   ========================================================= */
+
+.remove-btn {
+  background: var(--danger);
+  color: white;
+}
+
+.remove-btn:hover {
+  background: var(--danger-dark);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  main {
+    padding: 30px;
+  }
+}
+
+
+@media (max-width: 750px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .navbar {
+    padding: 16px 25px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main {
+    padding: 25px 18px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar h2 {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .checkout {
+    padding: 20px;
+  }
+
+  .order-success {
+    padding: 35px 20px;
+  }
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --text: #f3f4f6;
+    --text-light: #9ca3af;
+
+    --bg: #111827;
+    --surface: #1f2937;
+
+    --border: #374151;
+
+    --shadow-sm:
+      0 2px 8px rgba(0, 0, 0, 0.25);
+
+    --shadow-md:
+      0 8px 24px rgba(0, 0, 0, 0.3);
+
+    --shadow-lg:
+      0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  input,
+  textarea,
+  select {
+    background: #1f2937;
+    color: #f3f4f6;
+  }
+
+  .product-card,
+  .cart-item,
+  .total,
+  .empty-cart,
+  .checkout {
+    background: var(--surface);
+  }
+}
