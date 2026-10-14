@@ -310,5 +310,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (checkoutForm) {
         checkoutForm.addEventListener("submit", validateCheckout);
-    }
+    } 
 });

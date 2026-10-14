@@ -169,7 +169,7 @@ nav a:hover{
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:28px;
     padding:10px
-}
+} 
 
 .product-card{
     background:linear-gradient(145deg,#ffffff,#f3f1ff);
